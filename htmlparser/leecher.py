@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 #by HVNSweeting
 
+#TODO check today and print result is of today or yesterday
 from HTMLParser import HTMLParser
 import urllib
 import codecs
 import string
 
 FILE_NAME = 'kq.txt'
+LINK = 'http://kqxs.vn/'
 
 class MyHTMLParser(HTMLParser):
 	"""Parser get content in first table in site"""
@@ -33,7 +35,7 @@ class MyHTMLParser(HTMLParser):
 		return self.fed
 
 #read data from URL
-response = urllib.urlopen('http://kqxs.vn/')
+response = urllib.urlopen(LINK)
 #print response.headers['content-type']
 html = response.read()
 
