@@ -1,0 +1,4 @@
+This library seem quite useless. It only helps return tag, attribute, data but in no-structure.
+Beautiful Soup and other module use this as base module.
+
+This example try to fetch data from a table from a specific site. Use only HTMLParser for parse HTML
