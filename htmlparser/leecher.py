@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 #by HVNSweeting
 
-#TODO check today and print result is of today or yesterday
 from HTMLParser import HTMLParser
 import urllib
 import codecs
@@ -51,7 +50,7 @@ result = parser.get_data()
 #write to file
 fw = codecs.open(FILE_NAME, 'w', 'utf-8')
 #line.strip() remove string contains only spaces
-[fw.write(line + '\n') for line in result if line.strip()]
+fw.writelines(line + '\n' for line in result if line.strip())
 fw.close()
 
 print "Done! data printed to file %s" %(FILE_NAME)
